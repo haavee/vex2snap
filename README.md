@@ -27,6 +27,18 @@ Note: if the output file(s) already exist, the program halts. This behaviour can
 
     --dest             set destination path for output files
 
+    --shift today | [+-]<vextime>
+                       shift all UTC time stamps in the schedule.
+                       Supported OFFSET formats:
+                       'today'       shift day of observation to today.
+                                     Uses a sidereal day length of 23h56m4s
+                                     so the elevation of the sources
+                                     should be retained
+                       <vexime>      shift to day-of-year in time stamp,
+                                     see 'today'
+                       [+-]<vextime> add/subtract this much to each time stamp
+
+
      --recorder TYPE[:DISKS]
                        Override scheduled recorder from VEX file 
                        By default vex2snap will use the recorder defined
